@@ -45,7 +45,7 @@ fi
 
 echo "Running npm install..."
 cd ${VVV_PATH_TO_SITE}
-npm install
+npm install --no-bin-link
 node ./setup.js
 grunt composer:run:install
 
