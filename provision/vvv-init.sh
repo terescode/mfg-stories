@@ -29,7 +29,7 @@ if [[ ! -d "${VVV_PATH_TO_SITE}/public_html/index.php" ]]; then
   echo "Configuring WordPress Stable..."
   noroot wp core config --dbname=manufacturingstories --dbuser=wp --dbpass=wp --quiet --extra-php <<PHP
 define( 'WP_DEBUG', true );
-$table_prefix = 'wp_crfqu5gtkb_';
+\$table_prefix = 'wp_crfqu5gtkb_';
 PHP
 
   echo "Importing production DB copy..."
