@@ -45,5 +45,7 @@ fi
 
 echo "Running npm install..."
 cd ${VVV_PATH_TO_SITE}
-npm install
+whoami
+whoami
+#npm install
 
