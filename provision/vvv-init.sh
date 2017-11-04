@@ -15,11 +15,13 @@ touch ${VVV_PATH_TO_SITE}/log/access.log
 # Install and configure the latest stable version of WordPress
 if [[ ! -d "${VVV_PATH_TO_SITE}/public_html/index.php" ]]; then
 
-  echo "Downloading WordPress Stable, see http://wordpress.org/"
+  echo "Downloading WordPress Stable, see http://wordpress.org/..."
   cd ${VVV_PATH_TO_SITE}
   curl -L -O "https://wordpress.org/latest.tar.gz"
+  echo "Unpacking WordPress Stable to public_html..."
   noroot tar -xvf latest.tar.gz
-  mv wordpress public_html
+  cp -R wordpress/* public_html
+  rm -rf wordpress
   rm latest.tar.gz
   cd ${VVV_PATH_TO_SITE}/public_html
 
@@ -39,6 +41,7 @@ else
 
 fi
 
+echo "Running npm install..."
 cd ${VVV_PATH_TO_SITE}
 npm install
 
