@@ -1,4 +1,4 @@
-/*global require, console*/
+/* eslint-env node */
 
 var https = require('https'),
   fs = require('fs'),

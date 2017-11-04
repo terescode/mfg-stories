@@ -1,4 +1,24 @@
 {
+  "name": "mfgstories/mfgstories-site",
+  "description": "Manufacturing Stories WordPress site",
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "public_html/wp-content/plugins/{$name}": [
+        "wpackagist-plugin/image-widget",
+        "wpackagist-plugin/contact-form-7"
+      ]
+    }
+  },
+  "require": {
+    "wpackagist-plugin/image-widget": "^4.4.6",
+    "wpackagist-plugin/contact-form-7": "^4.9.1"
+  },
   "require-dev": {
     "10up/wp_mock": "dev-master",
 		"phpunit/phpunit": "4.*",

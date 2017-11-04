@@ -3,8 +3,8 @@
 
 # Make a database, if we don't already have one
 echo -e "\nCreating database 'wp_mfgstories' (if it's not already there)"
-mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS wp_mfgstories"
-mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON wp_mfgstories.* TO wp@localhost IDENTIFIED BY 'wp';"
+mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS manufacturingstories"
+mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON manufacturingstories.* TO wp@localhost IDENTIFIED BY 'wp';"
 echo -e "\n DB operations done.\n\n"
 
 # Nginx Logs
@@ -24,17 +24,12 @@ if [[ ! -d "${VVV_PATH_TO_SITE}/public_html/index.php" ]]; then
   cd ${VVV_PATH_TO_SITE}/public_html
 
   echo "Configuring WordPress Stable..."
-  noroot wp core config --dbname=wordpress_default --dbuser=wp --dbpass=wp --quiet --extra-php <<PHP
-// Match any requests made via xip.io.
-if ( isset( \$_SERVER['HTTP_HOST'] ) && preg_match('/^(local.wordpress.)\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(.xip.io)\z/', \$_SERVER['HTTP_HOST'] ) ) {
-    define( 'WP_HOME', 'http://' . \$_SERVER['HTTP_HOST'] );
-    define( 'WP_SITEURL', 'http://' . \$_SERVER['HTTP_HOST'] );
-}
+  noroot wp core config --dbname=manufacturingstories --dbuser=wp --dbpass=wp --quiet --extra-php <<PHP
 define( 'WP_DEBUG', true );
 PHP
 
-  echo "Installing WordPress Stable..."
-  noroot wp core install --url=local.wordpress.test --quiet --title="Local WordPress Dev" --admin_name=admin --admin_email="admin@local.test" --admin_password="password"
+  echo "Importing production DB copy..."
+  mysql -u root --password=root wp_mfgstories < `ls ${VVV_PATH_TO_SITE}/provision/manufacturingstories*.sql`
 
 else
 
@@ -43,3 +38,7 @@ else
   noroot wp core update
 
 fi
+
+cd ${VVV_PATH_TO_SITE}
+npm install
+
