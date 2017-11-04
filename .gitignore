@@ -1,0 +1,27 @@
+# MacOS
+.DS_Store
+
+# Composer
+composer.phar
+vendor/*
+
+# NodeJS
+node_modules/*
+
+# Build time assets
+build/*
+reports/*
+admin/js/bundle.*
+admin/css/bundle.*
+
+# Logs
+*.log
+/log
+
+# All wordpress base files except our custom plugin
+/public_html/*
+!/public_html/wp-content
+/public_html/wp-content/*
+!/public_html/wp-content/plugins
+/public_html/wp-content/plugins/*
+!/public_html/wp-content/plugins/mfgstories
