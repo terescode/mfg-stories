@@ -45,7 +45,7 @@ fi
 
 echo "Running npm install..."
 cd ${VVV_PATH_TO_SITE}
-whoami
-whoami
-#npm install
+npm install
+node ./setup.js
+grunt composer:run:install
 
