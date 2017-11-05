@@ -64,6 +64,7 @@ fi
 echo "Running composer install..."
 noroot grunt composer:run:install
 
+cd ${VVV_PATH_TO_SITE}/$WPDIR
 noroot wp plugin install ${VVV_PATH_TO_SITE}/assets/plugins/blastcaster.zip --activate
 noroot wp theme install ${VVV_PATH_TO_SITE}/assets/themes/wpex-noir.zip --activate
 
