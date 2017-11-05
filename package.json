@@ -2,8 +2,7 @@
   "name": "mfgstories",
   "version": "1.0.0",
   "description": "Manufacturing Stories WordPress Customizations",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Terescode, LLC",
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -13,6 +12,5 @@
     "grunt-phpmd": "^0.1.1",
     "xml2js": "^0.4.17"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
