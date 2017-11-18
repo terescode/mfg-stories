@@ -1,0 +1,206 @@
+/*
+ * Theme Name:   Manufactoring Stories Theme
+ * Description:  Manufacturing Stories child theme based on wpex-noir
+ * Version:     1.0.0
+ * Author:      Terescode, LLC
+ * Author URI:  http://www.terescode.com
+ * Template:    wpex-noir
+*/
+
+.wpex-site-nav .wpex-dropdown-menu > li > a:hover {
+    color: #2646a3 !important;
+}
+
+.wpex-site-nav .wpex-dropdown-menu > li.current-menu-item > a {
+    color: #fff !important;
+}
+.wpex-newsletter-widget button, .wpex-site-searchform button {
+    background: #25387b !important;
+}
+.wpex-site-content .wpex-social-profiles-widget li a {
+    color:#25387b;
+}
+.wpex-site-content .wpex-social-profiles-widget li a:hover {
+    color:#fff;
+    background:#25387b;
+}
+.wpex-widget-popular-posts li .wpex-count {
+    background:#3b3e4c;
+}
+.wpex-widget-popular-posts li a {
+    color:#25387b;
+}
+.wpex-site-footer .wpex-newsletter-widget {
+    background: #c4202f;
+}
+.wpex-archive-title {
+    color:#3b3e4c;
+}
+.wpex-footer-widgets .footer-widget {
+    margin-bottom:10px;
+}
+
+/*home page – JimMacLeod */
+.home-page-boxes {
+	margin:8px;
+	float:left;
+	display:inline;
+	width:225px;
+    position: relative;
+}
+.home-page-boxes-image {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+.wpex-post-thumbnail {
+    display:none;
+}
+#home-page-box-1 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #f15a24 , #ed1c24); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #f15a24 , #ed1c24); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #f15a24 , #ed1c24); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #f15a24 , #ed1c24); /* Standard syntax (must be last) */
+}
+#home-page-box-2 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #39b54a , #029345); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #39b54a , #029345); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #39b54a , #029345); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #39b54a , #029345); /* Standard syntax (must be last) */
+}
+#home-page-box-3 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #93278f , #662d91); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #93278f , #662d91); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #93278f , #662d91); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #93278f , #662d91); /* Standard syntax (must be last) */
+}
+
+#home-page-box-4 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #ffff00 , #f7931e); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #ffff00 , #f7931e); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #ffff00 , #f7931e); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #ffff00 , #f7931e); /* Standard syntax (must be last) */
+}
+#home-page-box-5 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #e800f5 , #ed1e79); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #e800f5 , #ed1e79); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #e800f5 , #ed1e79); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #e800f5 , #ed1e79); /* Standard syntax (must be last) */
+}
+#home-page-box-6 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #0071bc , #2e3192); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #0071bc , #2e3192); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #0071bc , #2e3192); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #0071bc , #2e3192); /* Standard syntax (must be last) */
+}
+
+#home-page-box-7 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #29abe2 , #0173bd); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #29abe2 , #0173bd); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #29abe2 , #0173bd); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #29abe2 , #0173bd); /* Standard syntax (must be last) */
+}
+#home-page-box-8 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #fbb03b , #f15a24); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #fbb03b , #f15a24); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #fbb03b , #f15a24); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #fbb03b , #f15a24); /* Standard syntax (must be last) */
+}
+#home-page-box-9 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #9f1a27, #6a0a13 ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #9f1a27, #6a0a13 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #9f1a27, #6a0a13 ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #9f1a27, #6a0a13 ); /* Standard syntax (must be last) */
+}
+#home-page-box-10 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #921988 , #7b0d93); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #921988 , #7b0d93); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #921988 , #7b0d93); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #921988 , #7b0d93); /* Standard syntax (must be last) */
+}#home-page-box-11 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #486595 , #39517a); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #486595 , #39517a); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #486595 , #39517a); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #486595 , #39517a); /* Standard syntax (must be last) */
+}#home-page-box-12 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #009245 , #006837); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #009245 , #006837); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #009245 , #006837); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #009245 , #006837); /* Standard syntax (must be last) */
+}
+.wpex-featured-entry {
+    margin-bottom:20px;
+    margin-top:10px;
+}
+
+.wpex-featured-entry-title {
+    font-size:16px;
+}
+.home-page-intro {
+    font-size:20px;
+    text-align:center;
+    margin-bottom:10px;
+}
+.wpex-featured-entry-header {
+    bottom:10px;
+    left:20px;
+}
+.wpex-featured-entry-meta {
+    display:none;
+}
+#partners li {
+    display:block;
+    float:left;
+    margin-bottom: 18px;
+    margin-right: 20px;
+}
+.widget-recent-list .wpex-thumbnail {
+    width:100%;
+    height:100%;
+}
+.widget-recent-list .wpex-thumbnail img {
+    width:300px;
+    height:169px;
+}
+.wpex-sidebar-widget widget_wpex_recent_posts_thumb wpex-clr {
+    min-height:190px;
+}
+.wpex-details wpex-clr {
+    display: block;
+    float:left;
+}
+.wpex-thumbnail wpex-clr {
+    max-width:300px;
+}
+.wpex-entry a {
+    text-decoration:underline;
+}
+}
+@media only screen and (max-width: 767px) { 
+    	.home-page-boxes {	width:45%; margin:17px; }
+}
+#mc_embed_signup form {
+    padding:10px 0 10px 8% !important;
+}
+.wpex-sidebar-widget {
+    margin-bottom:10px;
+}
+.wpex-comment {
+    display:none;
+}
+.wpex-post-share li {
+    width:33%;
+}

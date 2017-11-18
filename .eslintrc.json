@@ -14,11 +14,8 @@
   "env": {
     "es6": true
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": [],
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
+    "eslint:recommended"
   ]
 }
