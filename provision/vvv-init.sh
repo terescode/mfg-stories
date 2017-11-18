@@ -20,7 +20,7 @@ if [[ ! -f "${VVV_PATH_TO_SITE}/$WPDIR/index.php" ]]; then
   mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS $WPDBNAME;"
   mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON $WPDBNAME.* TO wp@localhost IDENTIFIED BY 'wp';"
   echo -e "\n DB operations done.\n\n"
-  
+
   echo "Downloading WordPress Stable, see http://wordpress.org/..."
   cd ${VVV_PATH_TO_SITE}
   curl -L -O "https://wordpress.org/latest.tar.gz"
@@ -43,7 +43,7 @@ PHP
   echo "Updating site URLs..."
   noroot wp option update home "$WPSITEURL"
   noroot wp option update siteurl "$WPSITEURL"
-  
+
 else
 
   echo "Updating WordPress Stable..."
@@ -54,6 +54,7 @@ fi
 
 echo "Running npm install..."
 cd ${VVV_PATH_TO_SITE}
+noroot npm install
 noroot npm install
 
 if [[ ! -f "${VVV_PATH_TO_SITE}/composer.phar" ]]; then
@@ -67,5 +68,6 @@ noroot grunt composer:run:install
 cd ${VVV_PATH_TO_SITE}/$WPDIR
 noroot wp plugin install ${VVV_PATH_TO_SITE}/assets/plugins/blastcaster.zip --activate
 noroot wp theme install ${VVV_PATH_TO_SITE}/assets/themes/wpex-noir.zip --activate
-
-
+noroot wp plugin activate image-widget
+noroot wp plugin activate contact-form-7
+noroot wp plugin activate manufacturingstories
