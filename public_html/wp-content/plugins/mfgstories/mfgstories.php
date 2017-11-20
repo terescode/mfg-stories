@@ -16,6 +16,16 @@ if ( ! \Terescode\MfgStories\is_wpinc_defined() ) {
 
 register_theme_directory( dirname( __FILE__ ) . '/themes' );
 
+if ( ! is_admin() ) {
+	function mfgstories_home_pre_get_posts( &$query ) {
+		if ( $query->is_home() && $query->is_main_query() ) {
+			$query->set( 'posts_per_page', 9 );
+			$query->set( 'no_found_rows', true );
+		}
+	}
+	add_action( 'pre_get_posts', 'mfgstories_home_pre_get_posts' );
+}
+
 if ( is_admin() ) {
 
 	function mfgstories_admin_notices() {
