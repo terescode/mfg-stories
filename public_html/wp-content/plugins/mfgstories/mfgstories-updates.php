@@ -71,3 +71,7 @@ function mfgstories_update_3() {
 function mfgstories_update_4() {
 	update_option( 'blogdescription', 'ManufacturingStories is a place where everyone can learn about and share information on the many exciting programs available to help revitalize &amp; modernize manufacturing in America and to help bridge the skills gap between education and the workplace.' );
 }
+
+// Manual updates:
+// Set Home to /
+// Remove partners menu

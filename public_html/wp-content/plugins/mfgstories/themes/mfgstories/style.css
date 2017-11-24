@@ -14,3 +14,7 @@
 .home .wpex-loop-entry-content {
     padding: 8px;
 }
+
+.home .wpex-loop-entry-media img {
+	max-height: 200px;
+}
