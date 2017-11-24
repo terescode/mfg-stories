@@ -6,3 +6,11 @@
  * Author URI:  http://www.terescode.com
  * Template:    wpex-noir
 */
+
+.home .wpex-loop-entry-inner {
+    border: 1px solid #25387c;
+}
+
+.home .wpex-loop-entry-content {
+    padding: 8px;
+}
