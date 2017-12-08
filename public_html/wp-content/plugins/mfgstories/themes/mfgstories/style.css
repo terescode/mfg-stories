@@ -18,3 +18,67 @@
 .home .wpex-loop-entry-media img {
 	max-height: 200px;
 }
+
+.mfs-topbar-search {
+	float: right;
+}
+
+.mfs-topbar-search .wpex-site-searchform input[type="search"] {
+	height: 26px;
+	border: 0px;
+}
+
+.mfs-topbar-search button {
+	height: 27px;
+	line-height: 27px;
+	border-radius: 0px;
+	border:0px;
+}
+
+.wpex-site-header {
+	padding: 20px 0px;
+}
+
+.wpex-site-content {
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+/*------------------------------------------------------------------
+[# Anything under 1024px]
+-------------------------------------------------------------------*/
+@media only screen and (max-width: 1023px) {
+
+}
+
+/*------------------------------------------------------------------
+[# Anything under 959px]
+-------------------------------------------------------------------*/
+@media only screen and (max-width: 959px) {
+	.wpex-site-nav .wpex-mobile-nav-toggle { display: none !important; }
+	.wpex-site-nav .wpex-dropdown-menu { display: block !important; }
+	.wpex-sidebar { display: none; }
+}
+
+/*------------------------------------------------------------------
+[# Anything under 767px]
+-------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+
+}
+
+/*------------------------------------------------------------------
+[# Anything under 600px]
+-------------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+	.wpex-site-header, .wpex-site-nav { display: none; }
+	.mfs-topbar-search { float: right; }
+	.wpex-has-offcanvas-menu .wpex-topbar { padding-left: 0px; }
+	.wpex-topbar-ofcanvas-toggle { display: block; float: left; margin-right: 20px; position: inherit; left: auto; height: auto; line-height: normal; top: auto; margin-top: auto; }
+	.wpex-archive-header { margin-bottom: 20px; }
+	.wpex-archive-title { font-size: 1.5em; }
+	.wpex-loop-entry-footer { display: none; }
+	.mfs-topbar-search .wpex-site-searchform input[type="search"] { width: 110px; }
+	.wpex-loop-entry.wpex-col-1 .wpex-loop-entry-inner { padding-bottom: 10px; margin-bottom: 10px; }
+	.wpex-sticky-nav .wpex-topbar-wrap { background: #fff; z-index: 999; transform: translateZ(0); -webkit-transform: translateZ(0); border-top: 0; }
+}
