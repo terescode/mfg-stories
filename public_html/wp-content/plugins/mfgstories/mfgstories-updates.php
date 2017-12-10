@@ -240,3 +240,17 @@ function mfgstories_update_8() {
 	$mods[ $key ]['social_services'] = $social_services;
 	update_option( 'widget_wpex_social_profiles', $mods );
 }
+
+/**
+ * Update pinterest and mail links in footer widget.
+ */
+function mfgstories_update_9() {
+	$mods = get_option( 'widget_wpex_social_profiles' );
+	$key = reset(array_keys($mods));
+	$social_services = $mods[ $key ]['social_services'];
+	$social_services['pinterest']['url']
+		= 'https://www.pinterest.com/mfgstories';
+	$social_services['email']['url'] = '';
+	$mods[ $key ]['social_services'] = $social_services;
+	update_option( 'widget_wpex_social_profiles', $mods );
+}
