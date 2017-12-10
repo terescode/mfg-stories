@@ -62,7 +62,7 @@ function mfgstories_customizer_css() {
 	echo '<style type="text/css">' . $inline_css . '</style>';
 }
 
-function mfgstories_sticky_topbar() {
+function mfgstories_footer_js() {
 	?>
 	<script>
 		( function( $ ) {
@@ -73,6 +73,12 @@ function mfgstories_sticky_topbar() {
 						topSpacing      : 0,
 						responsiveWidth : true,
 						className       : 'wpex-sticky-nav'
+					} );
+					$( '.mfs-topbar-mobile-search button' ).click( function () {
+						$( '.mfs-topbar-search' ).show();
+					} );
+					$( '.mfs-topbar-mobile-search-close' ).click( function () {
+						$( '.mfs-topbar-search' ).hide();
 					} );
 				}
 			} );
@@ -87,4 +93,4 @@ add_filter(
 	'mfgstories_filter_sidebars_widgets'
 );
 add_action( 'wp_head', 'mfgstories_customizer_css' );
-add_action( 'wp_footer', 'mfgstories_sticky_topbar' );
+add_action( 'wp_footer', 'mfgstories_footer_js' );

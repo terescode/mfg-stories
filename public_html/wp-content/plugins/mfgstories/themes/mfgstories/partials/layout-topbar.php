@@ -29,12 +29,21 @@ if ( $display ) : ?>
 
 			<?php get_template_part( 'partials/topbar/topbar-offcanvas-toggle' ); ?>
 
+			<div class="mfs-topbar-mobile-logo"><h4>ManufacturingStories®</h4></div>
+
 			<?php get_template_part( 'partials/topbar/topbar-social' ); ?>
 
 			<?php get_template_part( 'partials/topbar/topbar-cart' ); ?>
 
 			<div class="mfs-topbar-search">
+				<a href="javascript:void(0)" class="mfs-topbar-mobile-search-close">
+				X
+				</a>
 			<?php get_template_part( 'searchform' ); ?>
+			</div>
+
+			<div class="mfs-topbar-mobile-search">
+				<button type="button"><span class="fa fa-search"></span></button>
 			</div>
 		</div><!-- .wpex-topbar -->
 

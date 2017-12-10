@@ -44,6 +44,33 @@
 	padding-bottom: 30px;
 }
 
+.mfs-topbar-mobile-logo {
+	display: none;
+	float: left;
+}
+
+.mfs-topbar-mobile-logo h4 {
+	color: white;
+}
+
+.mfs-topbar-mobile-search {
+	display: none;
+	float: right;
+}
+
+.mfs-topbar-mobile-search button {
+	width: 40px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	display: block;
+	padding: 0px;
+}
+
+.mfs-topbar-mobile-search-close {
+	display: none;
+}
+
 /*------------------------------------------------------------------
 [# Anything under 1024px]
 -------------------------------------------------------------------*/
@@ -58,27 +85,41 @@
 	.wpex-site-nav .wpex-mobile-nav-toggle { display: none !important; }
 	.wpex-site-nav .wpex-dropdown-menu { display: block !important; }
 	.wpex-sidebar { display: none; }
+	.footer-widget { text-align: center; }
+	.mfs-topbar-search { display:none; position: absolute; width: 100%; margin-left: -55px; }
+	.mfs-topbar-search .wpex-site-searchform button { z-index: 9999; }
+	.mfs-topbar-mobile-search { display: block; }
+	.mfs-topbar-mobile-search-close { display: block; position: absolute; z-index: 9999; padding: 2px 4px; color: black; }
+	.mfs-topbar-search .wpex-site-searchform input[type="search"] { padding: 0px 20px; z-index: 9999; }
+	.wpex-sticky-nav .wpex-topbar-wrap { background: #fff; z-index: 999; transform: translateZ(0); -webkit-transform: translateZ(0); border-top: 0; }
+	.wpex-info-widget div { padding-left: 0px; }
+	.wpex-info-widget .fa { display: none; }
+	.wpex-loop-entry-footer { display: none; }
 }
 
 /*------------------------------------------------------------------
 [# Anything under 767px]
 -------------------------------------------------------------------*/
 @media only screen and (max-width: 767px) {
-
+	.wpex-site-header, .wpex-site-nav { display: none; }
+	.wpex-topbar-social { display: none; }
+	.mfs-topbar-mobile-logo { display: block; }
+	.mfs-topbar-search .wpex-site-searchform button { z-index: 9999; }
 }
 
 /*------------------------------------------------------------------
 [# Anything under 600px]
 -------------------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
-	.wpex-site-header, .wpex-site-nav { display: none; }
-	.mfs-topbar-search { float: right; }
-	.wpex-has-offcanvas-menu .wpex-topbar { padding-left: 0px; }
-	.wpex-topbar-ofcanvas-toggle { display: block; float: left; margin-right: 20px; position: inherit; left: auto; height: auto; line-height: normal; top: auto; margin-top: auto; }
 	.wpex-archive-header { margin-bottom: 20px; }
 	.wpex-archive-title { font-size: 1.5em; }
-	.wpex-loop-entry-footer { display: none; }
-	.mfs-topbar-search .wpex-site-searchform input[type="search"] { width: 110px; }
 	.wpex-loop-entry.wpex-col-1 .wpex-loop-entry-inner { padding-bottom: 10px; margin-bottom: 10px; }
-	.wpex-sticky-nav .wpex-topbar-wrap { background: #fff; z-index: 999; transform: translateZ(0); -webkit-transform: translateZ(0); border-top: 0; }
+}
+
+/*------------------------------------------------------------------
+[# Anything under 340px]
+-------------------------------------------------------------------*/
+@media only screen and (max-width: 339px) {
+	.wpex-topbar-ofcanvas-toggle { padding-right: 12px; }
+	.mfs-topbar-mobile-logo { position: absolute; margin-left: -12px; }
 }
