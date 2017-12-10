@@ -196,3 +196,47 @@ function mfgstories_update_5() {
 		}
 	}
 }
+
+/**
+ * Change the category names.
+ */
+function mfgstories_update_6() {
+	$cat = get_category_by_slug( 'jobs-and-workforce' );
+	if ( $cat ) {
+		wp_update_category([
+			'cat_ID' => $cat->term_id,
+			'cat_name' => 'Workforce',
+		]);
+	}
+	$cat = get_category_by_slug( 'energy-and-sustainability' );
+	if ( $cat ) {
+		wp_update_category([
+			'cat_ID' => $cat->term_id,
+			'cat_name' => 'Sustainability',
+		]);
+	}
+}
+
+/**
+ * Import theme mod changes for topbar pinterest link and linked in.
+ */
+function mfgstories_update_7() {
+	import_config( 'config/theme_mods.json', 'theme_mods_mfgstories' );
+}
+
+/**
+ * Update pinterest and mail links in footer widget.
+ */
+function mfgstories_update_8() {
+	$mods = get_option( 'widget_wpex_social_profiles' );
+	$key = reset(array_keys($mods));
+	$social_services = $mods[ $key ]['social_services'];
+	$social_services['pinterest']['url']
+		= 'https://www.pinterest.com/mfgstories';
+	$social_services['email']['url']
+		= 'mailto:ddewit@manufacturingstories.com';
+	$social_services['linkedin']['url']
+		= 'https://www.linkedin.com/company/manufacturing-stories';
+	$mods[ $key ]['social_services'] = $social_services;
+	update_option( 'widget_wpex_social_profiles', $mods );
+}
