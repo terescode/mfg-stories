@@ -229,7 +229,8 @@ function mfgstories_update_7() {
  */
 function mfgstories_update_8() {
 	$mods = get_option( 'widget_wpex_social_profiles' );
-	$key = reset(array_keys($mods));
+	$keys = array_keys( $mods );
+	$key = reset( $keys );
 	$social_services = $mods[ $key ]['social_services'];
 	$social_services['pinterest']['url']
 		= 'https://www.pinterest.com/mfgstories';
@@ -246,11 +247,26 @@ function mfgstories_update_8() {
  */
 function mfgstories_update_9() {
 	$mods = get_option( 'widget_wpex_social_profiles' );
-	$key = reset(array_keys($mods));
+	$keys = array_keys( $mods );
+	$key = reset( $keys );
 	$social_services = $mods[ $key ]['social_services'];
 	$social_services['pinterest']['url']
 		= 'https://www.pinterest.com/mfgstories';
 	$social_services['email']['url'] = '';
 	$mods[ $key ]['social_services'] = $social_services;
 	update_option( 'widget_wpex_social_profiles', $mods );
+}
+
+/**
+ * Update the site/blog title.
+ */
+function mfgstories_update_10() {
+	update_option( 'blogname', 'ManufacturingStories' );
+}
+
+/**
+ * Import theme mod changes to remove readmore.
+ */
+function mfgstories_update_11() {
+	import_config( 'config/theme_mods.json', 'theme_mods_mfgstories' );
 }

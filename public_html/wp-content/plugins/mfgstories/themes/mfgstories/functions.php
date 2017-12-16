@@ -87,6 +87,13 @@ function mfgstories_footer_js() {
 <?php
 }
 
+function mfgstories_document_title_parts( $title ) {
+	if ( ! empty( $title['tagline'] ) ) {
+		unset( $title['tagline'] );
+	}
+	return $title;
+}
+
 add_action( 'pre_get_posts', 'mfgstories_home_pre_get_posts' );
 add_filter(
 	'sidebars_widgets',
@@ -94,3 +101,4 @@ add_filter(
 );
 add_action( 'wp_head', 'mfgstories_customizer_css' );
 add_action( 'wp_footer', 'mfgstories_footer_js' );
+add_filter( 'document_title_parts', 'mfgstories_document_title_parts' );
