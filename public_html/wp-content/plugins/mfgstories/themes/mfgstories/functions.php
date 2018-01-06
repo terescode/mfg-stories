@@ -50,7 +50,26 @@ function mfgstories_filter_sidebars_widgets( $sidebars_widgets ) {
 	return $sidebars_widgets;
 }
 
-function mfgstories_customizer_css() {
+function mfgstories_head() {
+	?>
+	<script>
+	  /* Google analytics */
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-32006510-1', 'auto');
+	  ga('send', 'pageview');
+
+		/* Ad tracking */
+		var trackOutboundLink = function(url, target) {
+		   ga('send', 'event', 'advertisement', 'click', url, {
+		     'transport': 'beacon',
+		     'hitCallback': function(){if(!target){window.open(url);}}
+		   });
+		}
+	</script>
+	<?php
 	$inline_css = '/* mfgstories inline css */';
 	$accent = get_theme_mod( 'accent_color' );
 	$custom_accent = get_theme_mod( 'custom_accent_color' );
@@ -94,11 +113,26 @@ function mfgstories_document_title_parts( $title ) {
 	return $title;
 }
 
+function mfgstories_image_widget_link_attributes( $attr, $instance ) {
+	$attr['onclick'] = 'javascript:trackOutboundLink(\''
+		. $instance['link']
+		. '\''
+		. ( $instance['linktarget'] ? ',\'' . $instance['linktarget'] . '\'' : '' )
+		. '); return true;';
+	return $attr;
+}
+
 add_action( 'pre_get_posts', 'mfgstories_home_pre_get_posts' );
 add_filter(
 	'sidebars_widgets',
 	'mfgstories_filter_sidebars_widgets'
 );
-add_action( 'wp_head', 'mfgstories_customizer_css' );
+add_action( 'wp_head', 'mfgstories_head' );
 add_action( 'wp_footer', 'mfgstories_footer_js' );
 add_filter( 'document_title_parts', 'mfgstories_document_title_parts' );
+add_filter(
+	'image_widget_link_attributes',
+	'mfgstories_image_widget_link_attributes',
+	10,
+	3
+);
