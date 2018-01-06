@@ -34,6 +34,10 @@ function mfgstories_filter_sidebars_widgets( $sidebars_widgets ) {
 		return $sidebars_widgets;
 	}
 
+	if ( is_admin() ) {
+		return $sidebars_widgets;
+	}
+
 	$sidebar = $sidebars_widgets['sidebar'];
 	$image_widgets_seen = 0;
 	foreach ( $sidebar as $index => $widget_id ) {
